@@ -4,10 +4,8 @@ run-name: "🏋️ AutoWOD – ${{ github.event_name == 'workflow_dispatch' && '
 on:
   schedule:
     # Runs twice to cover both Spain summer (CEST, UTC+2) and winter (CET, UTC+1) time.
-    # One of these will always land around 22:30 local time.
-    - cron: '59 19 * * *' 
+    # One of these will always land around 22:30 local time. 
     - cron: '0 20 * * *'
-    - cron: '1 20 * * *'
 
 
   # Run it manually from the Actions tab whenever you need to.
